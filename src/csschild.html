@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        dialog{
+            height: 300px;
+            width: 300px;
+            box-shadow: 2px 2px 2px gray;
+            border-radius: 5px;
+        }
+        .dialog-header{
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+            background-color: black;
+            color: white;
+            padding: 5px;
+            margin-bottom: 20px;
+        }
+        .dialog-body{
+            height: 200px;
+        }
+        .row{
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+        }
+        .row div{
+            margin-bottom: 20px;
+        }
+        .form-control{
+            border: 1px solid black;
+            width: 150px;
+            height: 20px;
+        }
+        .btn-login{
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            width: 90%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <dialog open>
+        <div class="dialog-header">
+            <span class="bi bi-person-fill">User Login</span>
+            <span class="bi bi-x-circle-fill"></span>
+        </div>
+        <div class="dialog-body">
+            <div class="row">
+                <div>
+                    <div>User Name</div>
+                    <div>Password</div>
+                </div>
+                <div>
+                    <div class="form-control"></div>
+                    <div class="form-control"></div>
+                </div>
+            </div>
+        </div>
+        <div class="dialog-footer">
+            <div class="btn-login">Login</div>
+        </div>
+    </dialog>
+
+
+
+    
+</body>
+</html>

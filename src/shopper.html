@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        .top-header{
+            display: flex;
+            justify-content: space-around;
+            height: 40px;
+            background-color: #F4F4F4;
+            align-items: center;
+            padding-left: 50px;
+            padding-right: 40px;
+        }
+        .txt-header{
+            font-size: 12px;
+            font-weight: bold;
+            font-family: arial;
+        }
+        .country{
+            padding-left: 20px;
+        }
+        .currency{
+            padding-left: 20px;
+        }
+        .lang{
+            padding-left: 20px;
+        }
+        .pages span{
+            padding-left: 20px;
+        }
+        .header-middle{
+            display: flex;
+            justify-content: space-around;
+            height: 80px;
+            align-items: center;
+        }
+        .brand{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .header-middle span{
+            padding-left: 20px;
+        }
+        .header-last{
+            display: flex;
+            justify-content: space-around;
+            background-color: #1F1F1F;
+            color: #fff;
+            height: 60px;
+            align-items: center;
+        }
+        nav span{
+            padding-left: 20px;
+        }
+        .sale{
+            color: #FF6F61;
+        }
+        .search-box{
+            width: 250px;
+            background-color: #303030;
+            color: gray;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        main{
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+        }
+        .mens{
+            height: 500px;
+            background-image: url("../public/mens.jpg");
+            background-size: cover;
+        }
+        .women{
+            height: 500px;
+            background-image: url("../public/women.jpg");
+            background-size: cover;
+        }
+        .kids{
+            height: 500px;
+            background-image: url("../public/kids.jpg");
+            background-size: cover;
+        }
+        .sports{
+            height: 500px;
+            background-image: url("../public/sports.jpg");
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-header">
+            <div>
+                <span class="bi bi-truck"></span>
+                <span class="txt-header">FREE SHPPING WORLDWIDE</span>
+                <span class="country">United State</span>
+                <span class="bi bi-chevron-down"></span>
+                <span class="currency">USD</span>
+                <span class="bi bi-chevron-down"></span>
+                <span class="lang">English</span>
+                <span class="bi bi-chevron-down"></span>
+            </div>
+            <div class="pages">
+                <span>Shipping</span>
+                <span>FAQ</span>
+                <span>Contact</span>
+                <span class="bi bi-facebook"></span>
+                <span class="bi bi-twitter"></span>
+                <span class="bi bi-instagram"></span>
+                <span class="bi bi-discord"></span>
+            </div>
+        </div>
+        <div class="header-middle">
+            <div>
+                <span>WOMEN</span>
+                <span>MEN</span>
+                <span>KIDS</span>
+            </div>
+            <div>
+                <span class="brand">SHOPPER.</span>
+            </div>
+            <div>
+                <span class="bi bi-person"></span>
+                <span class="bi bi-heart"></span>
+                <span class="bi bi-cart"></span>
+            </div>
+        </div>
+        <div class="header-last">
+            <div>
+                <nav>
+                    <span>Home</span>
+                    <span>Catalog</span>
+                    <span>Shop</span>
+                    <span>Pages</span>
+                    <span>Blog</span>
+                    <span>Docs</span>
+                    <span class="sale">Sale %</span>
+                </nav>
+            </div>
+            <div class="search">
+                <div class="search-box">
+                    <div>Search for items and brands</div>
+                    <div class="bi bi-search"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section>
+        <main>
+            <div class="mens">
+
+            </div>
+            <div class="women">
+
+            </div>
+            <div class="kids">
+
+            </div>
+            <div class="sports">
+
+            </div>
+        </main>
+    </section>
+</body>
+</html>
