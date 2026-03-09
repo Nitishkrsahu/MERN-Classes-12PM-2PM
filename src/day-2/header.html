@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        ol{
+            list-style: none;
+            display: flex;
+        }
+        header{
+            display: flex;
+            justify-content: space-around;
+            background-color: aquamarine;
+            align-items: center;
+        }
+        li{
+            padding-right: 15px;
+        }
+        .brand-name{
+            font-size: 30px;
+            font-weight: bold;
+            font-family: Arial;
+            text-shadow: 1px 1px 1px red;
+        }
+        li span{
+            padding-right: 8px;
+        }
+        .signup-btn{
+            border: 1px solid black;
+            border-radius: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 5px;
+            background-color: burlywood;
+        }
+        .signup-btn:hover{
+            background-color: red;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand-name">Netflix</div>
+        <nav>
+            <ol>
+                <li> <span class="bi bi-house"></span>Home</li>
+                <li> <span class="bi bi-person"></span>About</li>
+                <li> <span class="bi bi-telephone"></span>Contact</li>
+                <li class="signup-btn">Signup</li>
+            </ol>
+        </nav>
+    </header>
+</body>
+</html>
