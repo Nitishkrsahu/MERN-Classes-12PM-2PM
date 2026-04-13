@@ -1,0 +1,105 @@
+                                    JavaScript String Type
+
+- String is a literal with group of chars enclosed in quotes.
+- Chars include alphabet, number and special chars.
+- JavaScript string can be enclosed in
+    a) Single Quotes        '  '
+    b) Double Quotes        "  "
+    c) Backticks             `  `
+
+- Single and double quotes allows to switch between inner and outer strings.
+
+    var  link  =  "<a href='home.html'> Home </a>";
+    var  link  =  '<a href="home.html"> Home </a>';
+
+- Backtick is new from E5+ version, It allows embedded expression.
+- JavaScript embedded expression is known as binding expression.
+- Binding expression is defined using  "${  }".
+- Binding expression is allowed only in backtick.
+
+Syntax: Traditional String Concatenation with Dynamic
+
+        "string" + dynamic + "string"
+
+Syntax:  Backtick with binding expression
+
+        `string ${dynamic} string`
+- String can have various special chars.
+- However some special chars are not printable.
+- To print non-printable chars you have to the escape sequence char "\".
+
+Syntax:
+        var path = "D:\project";        =>  D:project
+        var path = "D:\\project";        =>  D:\project
+
+- JavaScript provides several built-in methods for string manipulation and formatting.
+- JavaScript string formatting methods are
+       
+        fontcolor()        => <font color='red'>
+        fontsize()            =>  <font size='5'>
+        bold()
+        italics()
+        sup()
+        sub()
+        toUpperCase()
+        toLowerCase()
+        etc..
+
+JavaScript KeyUp Event:
+- It defines actions to perform when user releases a key.
+- It verifies every keyup and sets functionality.
+- It is mostly used for string & number inputs.
+
+Syntax:
+    <input type="text" onkeyup="function()">
+    <textarea onkeyup="function()">
+
+JavaScript Blur Event:
+- It defines actions to perform when element lost focus.
+- It requires user to press tab or click outside the element to loose focus.
+
+Syntax:
+    <input type="text" onblur="function()">
+                                          String Data Type
+Data Binding Expression "${ }"  backtick
+String Formatting
+
+
+                                String Manipulation
+
+1. length         : It returns the total count of chars in a string.
+
+Syntax:
+        var msg = "Welcome";
+        msg.length;                // 7
+2. charAt()        : It returns the character at specified index.
+
+3. charCodeAt()    : It returns the ASCII code of char at specified index.
+
+Syntax:
+    var msg = "Ajax";
+    msg.charAt(0);        // A
+    msg.charCodeAt(0);    // 65     [A=65, Z=90, a=97, z=122]
+4. startsWith()        : It returns Boolean true if string starts with specified char(s)
+
+5. endsWith()        : It returns Boolean true if string ends with specified char(s)
+
+Syntax:
+    var  msg = "Welcome to JavaScript";
+    msg.startsWith("JavaScript");        // false
+    msg.endsWith("Java");                // false
+    msg.endsWith("Script");                // true
+    msg.endsWith("JavaScript");            // true
+    msg.endsWith("t");                    // true
+6. indexOf()        : It returns the first occurrence index number of specified char.
+
+7. lastIndexOf()    : It returns the last occurrence index number of specified char.
+
+Syntax:
+    var msg = "Welcome";
+    msg.indexOf("e");            // 1
+    msg.lastIndexOf("e");        // 6
+
+Note: If char is not found then it returns -1.
+
+    msg.indexOf("a");            // -1

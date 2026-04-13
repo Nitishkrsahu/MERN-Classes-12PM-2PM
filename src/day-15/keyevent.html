@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var username = "neha";
+        function VerifyName(){
+            var lblName = document.getElementById('txtName').value;
+            if(username === lblName){
+                document.getElementById('lblName').innerHTML = "user Name taken - Try Another".fontcolor('red').fontsize(2).italics();
+            }else{
+                document.getElementById('lblName').innerHTML = "";
+            }
+        }
+
+        function ChangeCase(){
+            var code = document.getElementById('txtCode').value;
+            document.getElementById('txtCode').value = code.toLowerCase();
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>UserName</dt>
+        <dd><input type="text" onkeyup="VerifyName()" id="txtName"></dd>
+        <dd id="lblName"></dd>
+        <dt>Bank IFSC Code</dt>
+        <dd><input type="text" id="txtCode" onblur="ChangeCase()"></dd>
+    </dl>
+</body>
+</html>
