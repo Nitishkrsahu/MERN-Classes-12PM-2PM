@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Age:out-of-range+div{
+            color: red;
+            font-size: 12px;
+            display: block;
+        }
+        .Age:in-range+div{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <dl>
+            <dt>Age</dt>
+            <dd>
+                <input type="number" min="15" max="25" name="Age" class="Age">
+                <div>Age 15 to 25 only</div>
+            </dd>
+        </dl>
+        <button>register</button>
+    </form>
+</body>
+</html>

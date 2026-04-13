@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            border: none;
+            padding: 10px;
+            width: 150px;
+            background-image: linear-gradient(40deg, red, yellow);
+        }
+        button:hover{
+            background-image: linear-gradient(20deg, black, white);
+            cursor: grab;
+            border-radius: 10px;
+        }
+        button:active{
+            background-image: linear-gradient(90deg, green, yellow);
+            cursor: move;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <dl>
+            <dt>User Name</dt>
+            <dd><input type="text"></dd>
+        </dl>
+        <button>Register</button>
+    </form>
+</body>
+</html>

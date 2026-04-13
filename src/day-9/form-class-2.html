@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fname+div{
+            display: none;
+        }
+        .fname:focus+div{
+            display: block;
+            font-size: 14px;
+            color: red;
+        }
+        .fname:focus{
+            outline: none;
+            border: 1px solid red;
+        }
+        .lname:read-only{
+            cursor: not-allowed;
+            background-color: lightgreen;
+        }
+        .fname:disabled{
+            cursor: not-allowed;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <dl>
+        <dt>First Name</dt>
+        <dd>
+            <input type="text" class="fname" value="neha" name="fname" placeholder="Name in Block" disabled>
+            <div class="name-error">Block Letter Only</div>
+        </dd>
+        <dt>Last Name</dt>
+        <dd><input type="text" class="lname" name="lname" value="wankhede" readonly></dd>
+    </dl>
+    <button>Register</button>
+</body>
+</html>

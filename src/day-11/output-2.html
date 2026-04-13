@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function pageLoad(){
+            document.querySelector('p').textContent = "<i>Hi Iam Learing Javascript</i>";
+            document.querySelector('h2').innerText = "Hey i am Neha";
+            document.querySelector('h3').innerHTML = "<i>Hello world</i>";
+            document.querySelector('h4').outerHTML = "<h1>Hi Iam Learing Javascript<h1>";
+            console.log("hello");
+            console.warn("world");
+            console.error("hii");
+            console.info("this is me");
+        }
+    </script>
+</head>
+<body onload="pageLoad()">
+    <p></p>
+    <h2></h2>
+    <h3></h3>
+    <h4></h4>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .terms+label{
+            color: red;
+        }
+        .terms:checked+label{
+            color: green;
+        }
+        .terms~button{
+            display: none;
+        }
+        .terms:checked~button{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <dl>
+            <dt>Term of serivce</dt>
+            <dd>
+                <textarea rows="10" cols="60" disabled>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores exercitationem rem voluptatum nihil pariatur, dolore amet ab autem! Porro corporis labore soluta expedita aut commodi asperiores laborum itaque obcaecati aliquam.
+                </textarea>
+            </dd>
+            <dd><input type="checkbox" class="terms"><label>Accept</label>
+            <br><br>
+            <button>Continue</button>
+            </dd>
+        
+        </dl>
+    </form>
+</body>
+</html>

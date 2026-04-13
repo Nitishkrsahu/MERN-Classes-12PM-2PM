@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .form{
+            border: 1px solid gray;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .btn{
+            border: none;
+            padding: 10px;
+            width: 100%;
+            background-color: yellowgreen;
+        }
+    </style>
+    <script>
+        function GenerateCode(){
+            var code = Math.round(Math.random()*10) + " " + Math.round(Math.random()*10) + " " + Math.round(Math.random()*10) + " " + Math.round(Math.random()*10);
+            document.getElementById("txtCode").textContent = code;
+        }
+    </script>
+</head>
+<body onload="GenerateCode()" >
+    <div class="form">
+        <h2>Login</h2>
+    <dl>
+        <dt>User Name</dt>
+        <dd><input type="text"></dd>
+        <dt>Password</dt>
+        <dd><input type="password"></dd>
+        <dt>Verify Code</dt>
+        <dd id="txtCode"></dd>
+    </dl>
+    <button class="btn">Login</button>
+    </div>
+</body>
+</html>

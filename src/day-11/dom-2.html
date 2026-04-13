@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function pageLoad(){
+            document.getElementById('pic').src = "../../public/kids.jpg"
+            document.getElementById('btn').value = "Register"
+            document.getElementById('username').value = 'neha'
+            document.getElementById('useremail').value = 'neha@gmail.com'
+        }
+    </script>
+</head>
+<body onload="pageLoad()">
+    
+    <form>
+        <h2>Register</h2>
+        UserName: <input type="text" id="username">
+        <br><br>
+        Email: <input type="email" id="useremail">
+        <br><br>
+        <input type="button" id="btn">
+    </form>
+    <img width="100" height="100" border="1" id="pic">
+</body>
+</html>
