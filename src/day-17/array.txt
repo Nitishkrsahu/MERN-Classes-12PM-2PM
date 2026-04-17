@@ -1,0 +1,413 @@
+8. slice()            : It extracts the chars between specified index.
+
+9. substr()        : It returns specified number of chars from given index.
+
+10. substring()        : It returns the chars between given index bi-directional.
+
+Syntax:
+    str.slice(startIndex, endIndex);        // If end index is not defined the it reads
+                                       up to end.
+
+                                    // End index must be a value greater than
+                                       start index.
+
+   
+    str.substr(startIndex, count_of_chars);    
+    str.substr(7,8);                        // from 7 it read 8 chars
+                                    // count must be greater than zero
+4
+
+    str.substring(startIndex, endIndex);    // end index can be bi-directional
+                                  String Manipulation
+length
+charAt()
+charCodeAt()
+indexOf()
+lastIndexOf()
+startsWith()
+endsWith()
+slice()
+substr()
+substring()
+Task :  
+       var email  = prompt("Enter your email");
+       
+        // email = john_nit12@gmail.com
+               david@outlook.com
+
+       var id = ?                // john_nit12, david
+       var domain = ?            // outlook.com, gmail.com
+
+       id= email.slice(0, email.indexOf("@"));
+       domain = email.slice(email.indexOf("@")+1);
+11. replace        : It finds and replaces the first occurrence char(s) with new char(s).
+
+12. replaceAll()    : It is new in ES6 it can replace all occurrences.
+
+Syntax:
+        str.replace("old", "new");
+        str.replaceAll("old", "new");
+13. trimStart()        : It removes the starting leading spaces.
+
+14. trimEnd()        : It removes the ending leading spaces.
+
+15. trim()            : It removes spaces both sides.
+
+
+Syntax:
+        var  msg  =  "    welcome";                =>  "    welcome"
+        msg.trim()                       =>  "welcome"
+16. split()        : It splits the string into an Array of string.
+              It can split at specified delimiter.
+17. match()        :  It is used to verify a string by matching against regular expression.
+                   It is Boolean method that returns true if string is matching the
+                   regular expression.
+
+Syntax:
+         string.match(regExp);
+
+Note: JavaScript regular expression is enclosed in "/  /".
+
+Syntax:
+            string.match(/ regExp /);
+
+        regExp    => comprises of meta characters and quantifiers
+                                                            Boolean Type
+
+- Booleans are used in decision making.
+- JavaScript Boolean types can handle the value "true & false".
+- However the Boolean true can be referred as 1 and false as 0.
+
+        true = 1
+        false = 0
+
+- But it is always recommend to use the keywords true or false.
+
+Syntax:
+        var stock = true;
+        if(stock==1) { }         => OK but not good
+        if(stock==true)  { }        => Good
+
+- Decision making requires various comparison and logical operators.
+
+Comparison Operators:
+       
+        ==            Equal
+        ===            Identical Equal / Strict Equal
+        >            Greater than
+        >=            Greater than or equal
+        <            Less than        
+        <=            Less than or equal
+        !=            Not Equal
+        !==            Not Identical
+
+FAQ: What is difference between "==" & "===" ?
+Ans:  "==" can compare value of different data types.
+     "===" will compare values only of same data type.
+
+Syntax:
+           var  x = "10";
+           var y = 10;
+           (x==y);            // true
+           (x===y);        // false
+
+Logical Operators
+
+        &&        AND
+        ||        OR
+        !        NOT
+
+Syntax:
+      condition1  &&  condition2        => returns true only when all evaluate to true.
+      condition1  ||  condition2        => returns true if any one is true.
+      !true                        =>  false
+      !false                        =>  true
+
+- Boolean types in a program are controlled using decision making statements.
+- Decision making in programming can be handled using
+
+        " if, else, switch, case, default "
+
+- You can also use a "ternary" operator  "?:"
+
+                                    The "IF" statement:
+- It is a decision making statement with various forms.
+- It includes approach like
+    a) Forward Jump
+    b) Simple Decision
+    c) Multiple Choices
+    d) Multi Level Decisions
+
+Forward Jump:
+- It is a decision making approach where statements are executed only when condition evaluates to true.
+- It will not provide any alternate process.
+
+Syntax:
+        if (boolean_expression)
+        {
+          statements on true;
+        }
+                                       IF Statement
+1.Forward Jump
+2. Simple Decision
+- It provides an alternative to execute when condition evaluates to false.
+- Alternative process is defined using "else" clause.
+
+Syntax:
+    if (condition)
+    {
+      statements on true;
+    }
+    else
+    {
+      statements on false;
+    }
+
+3. Multi Level Decisions:
+- It is the process of verifying the next level only when the first evaluates to true.
+- It allows to handle multiple conditions one after another.
+- It uses forward jump and allows to check any specific issue in given set of conditions.
+
+Syntax: [Ladder IF]
+     if (condition1)
+     {
+          if(condition2) {
+          statements when both conditions evaluates to true;
+          }
+         else {
+         statement when condition2 is false;
+         }
+     }
+     else
+     {
+       statements on condition1 false;
+     }
+                                   4. Multiple Choices
+- It is the process verifying other conditions even when the given evaluates to false.
+- You can provide multiple choices to handle same task.
+- It will be clear in handling specific choice of statements on true and verify others if given is not true.
+
+Syntax:
+    if (condition1)
+    {
+      statements on condition1 true;
+    }
+    else if(condition2)
+    {
+      statements on condition2 true;
+    }
+    else
+    {
+     statements when all conditions are false;
+    }
+Note: Multiple decisions are not good when there are several choices to verify.
+      It can't jump directly to the matching block of statements. It have to execute
+      all conditions up to the matching. It is slow when there are many decisions.
+
+FAQ: What is solution?
+Ans:  Better use a "Switch" selector.
+
+1. Write a program to find if the given value is within specified range.
+
+    function FindRange(val, min, max)
+    {
+        // your logic
+    }
+
+    FindRange(10, 1, 20);        // O/P your value 10 is in range of  1 to 20.
+        FindRange(10, 11, 20);        // OP  your value 10 is not in range of 11 to 20.
+
+2. Write a program to find the greatest among 3 numbers.
+
+    function FindGreatest(a, b, c)
+    {
+        // your logic
+    }
+
+    FindGreatest(10, 30, 15);    // b=30 is greater than a =10 & c=15
+    FindGreatest(10, 40, 80);    // c=80 is greater  than a=10 & b=40
+    FindGreatest(50, 20, 10);    // a=50 is greater than b=20 & c=10
+Switch Selector
+- Switch is used to interrupt the flow of electrons.
+- A switch selector is used to handle multiple decisions and execute exactly the block that is matching with given condition.
+
+Syntax:
+    switch (value | condition)
+    {
+       case  value|condition:
+        statements;
+        jump;
+      default:
+        statements;
+        jump;
+    }
+
+- Default executes the statements when value is not matching with any given case.
+- Jump statement can be any one of the following
+    a) break
+    b) return
+FAQ's:
+1. Can we define switch without default block?
+A. Yes. It is optional.
+
+2. Can we define default above or between cases?
+A. Yes. There is no order dependency.
+
+3. Why to remove default?
+A. To configure forward jump approach.
+
+4. Can we define case without jump statement?
+A. Yes. It will continue to the next case and stops at next occurrence of "jump".
+5. Can we define "return" as jump statement?
+A. Yes.
+
+6. What is difference between break and return?
+A. Break ends the current block but continues the execution. It keeps the compiling
+     process ON.
+    "Return" terminates the compiling process, and any statement defined after return
+     is not reachable to compiler.
+7. What can be value type or expression type for case & switch?
+A. It is recommended to have a number, string or Boolean.
+8. How to execute same block for multiple cases?
+A. By writing multiple cases for same block.
+
+        case 1:
+        case 2:
+        case 3:
+            statements to execute;
+            jump;
+
+
+9. How to execute same block for a ranges of values that match given case?
+A. You can check the range by using Boolean expression.
+     If cases are using a Boolean expression, then the switch must be always true.
+
+Syntax:
+    switch(true)
+    {
+       case boolean_expression:
+        statements;
+        jump;
+    }
+Summary
+- Number
+- String
+- Boolean
+
+                                               Undefined  Type
+
+- If a value is not defined into memory reference then compiler sets "undefined" as default.
+
+        var x;
+        console.log(x);        x = undefined
+
+- You can use "undefined" keyword to verify if value defined or not.
+
+
+Syntax:
+        if (x === undefined)             // not good
+        {
+        }
+
+        if (x)                            // returns true if value is defined        
+        {                               It is recommended
+        }
+
+        if (x != undefined)                // not good
+        {
+        }
+                                                                Null Type
+- Null specifies that value is not defined at runtime of application.
+- If value is expected at runtime and it is not provided into reference then JavaScript sets "null" as value.
+
+Syntax:
+    var x = prompt("Enter Number");
+   
+    x = '  ';            on OK without value
+    x = null;            on Cancel
+
+FAQ: What is undefined and not-defined?
+Ans:   undefined is about value.
+      not-defined is about reference memory.
+
+    Syntax:
+        var x;
+        console.log(`x=${x}\n y=${y}`);
+
+        x = undefined
+        y = not-defined
+
+                                                           Symbol Type
+
+- It is a new type of ES6 that allows to configure hidden type.
+- It defines a reference to store value, but hides over iterations.
+- It allows to access individually.
+- In HTML you can configure hidden values by using  <input> with type as "hidden".
+
+    <input type="hidden"   value="some_value" name="field">
+- You can configure such hidden types in JS by using symbol.
+Syntax:
+    var  Id = Symbol();
+   
+    var product = {
+        [Id]  : 1,
+        Name: "TV",
+        Price: 34000
+       }
+
+Summary - Primitive Types:
+- Number
+- String
+- Boolean
+- Null
+- Undefined
+- Symbol
+- Big Int
+
+
+                                                               Non Primitive Types
+- They are mutable types.
+- They don't have a fixed range for values.
+- Value range varies according to memory available.
+- They are stored in memory heap.
+- Heap don't have any order of accessing.
+- JavaScript non-primitive types are
+    a) Array
+    b) Object
+    c) Map etc.
+
+                                                                          Array Type
+- Arrays are used in computer programming to reduce overhead and complexity.
+- Arrays can reduce overhead by storing values in sequential order.
+- Arrays can reduce complexity by storing multiple values under one reference name.
+- Arrays can handle various types of values in a sequence.
+- However few technologies restrict array for same type of values.
+- Array size can change dynamically, which is not possible in other technologies.
+- Array refers to a type of arrangement of elements in a sequential order, where we have semantic purpose of arrangement. However we can access in random.
+
+Configuring Array:
+1. Array requires a variable to handle memory
+
+    var values;
+    let values;
+    const values;
+
+2. You have to assign or initialize memory to handle multiple values.
+
+3. Memory for multiple values is defined by using 2 techniques
+
+    a) Array() constructor
+    b) [ ]  meta character
+
+Syntax: Assignment
+
+    var values;
+    values = [ ];
+           (or)
+        values = new Array();
+
+Syntax: Initializing memory
+
+    var values = [ ];
+        (or)
+    var values = new Array();
