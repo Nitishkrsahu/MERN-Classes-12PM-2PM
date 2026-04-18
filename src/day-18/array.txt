@@ -1,0 +1,69 @@
+FAQ: What is difference between  Array() constructor and [ ] meta character?
+Ans:  Constructor configures dynamic memory using "new". It is discreet collection of
+      values in memory.
+
+      Meta character configures static memory, It is continuous collection of values
+      in memory. It allocates for first request and available across multiple requests.
+
+- What is Array?
+- How to configure Array?
+
+                                                       Array Elements
+- Elements refer to values of array.
+- Elements are stored with reference of a "property".
+- "Property" is a string type that maps to memory index.
+- You can store any type of value in memory of array.
+- Array element can be any type
+    a) Primitive
+    b) Non Primitive
+    c) Function
+- If you are configuring a function in array memory then it must be anonymous.
+- Anonymous functions a defined without name.
+- Anonymous function is invoked by using IIFE pattern.
+  [Immediately Invoking Function Expression]
+
+Syntax:
+        var values = [function(){ }];
+
+        values[0]();
+- Array allows to use "spread" operator to spread its values into reference array.
+- It allows de-structuring assignment.
+
+Syntax: without de-structure
+
+<script>
+      var values = [10, 20, 30];
+      var a = values[0];
+      var b = values[1];
+      var c = values[2];
+      document.write(`a=${a}<br>b=${b}<br>c=${c}`);
+</script>
+
+Syntax: with de-structure
+
+<script>
+      var values = [10, 20, 40];
+      var [a,b,c] = values;
+      document.write(`a=${a}<br>b=${b}<br>c=${c}`);
+</script>
+
+- Spread operator "..." allows to separate elements from array and store in individual memory references.
+
+Syntax:
+    var a = [10, 20];
+    var b = [a];                 // b have one element
+    var b = [...a];            // b have 2 elements
+    var b = a;                // b have 2 elements
+                    Array Properties & Methods
+
+1. length         : It returns the total count of elements in array.
+
+2. Reading Elements
+
+    toString()            It returns all elements separated with "," delimiter.
+    join()                   It returns all elements using custom delimiter.
+    slice()                 It returns elements between specified index.
+    find()                  It returns first occurrence element that matches given condition.
+    filter()                 It returns all elements that matches condition.
+    map()                  It returns all elements with index. It is async.
+    forEach()            It returns all elements with index. It is sync.
