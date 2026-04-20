@@ -1,0 +1,135 @@
+Syntax:
+    array.toString()
+    array.join("separator");
+    array.slice(startIndex, endIndex)
+    array.find(function(value){ return condition; })
+    array.filter(function(value){ return condition;})
+    array.map(function(value, index){ })
+    array.forEach(function(value, index){})
+Note: You can use explicit techniques like "for..in"  & "for..of"
+
+Syntax:
+        for(var property in collection)        => return all properties [0, 1, 2]
+        {
+        }
+
+        for(var value of collection)        => return all values from collection
+        {
+        }
+1. length
+2. Reading Array Elements
+
+Dynamically creating and appending elements into page:
+
+1. You can create any HTML element by using
+       
+        document.createElement()
+
+    Syntax:
+        document.createElement("p");
+        document.createElement("div");
+        document.createElement("img");
+
+2. Assign a new memory location for created elements
+
+     var  img = document.createElement("img");
+
+3. Define properties for elements
+
+     img.src=""
+     img.alt=""
+     img.width=""
+
+4. Append element into a parent by using "appendChild()" method.
+
+    document.querySelector("body").appendChild(img);
+3. Adding elements into Array
+
+        push()        : adds new element(s) as last item.
+        unshift()        : adds new element(s) as first item.
+        splice()        : adds new element(s) at specific position.
+
+Syntax:
+    collection.push(e1, e2, e3..);
+    collection.splice(startIndex, deleteCount, e1, e2, e3);
+
+    Note: Delete count must be always "0", when you want to add without deleting
+          the existing elements.
+
+4. Removing elements from array
+
+        pop()        : removes and returns the last item
+        shift()        : removes and returns the first item
+        splice()        : removes and returns specific item(s)
+
+Syntax:
+        collection.splice(startIndex, deleteCount);
+
+5. Finding Elements
+
+        find()
+        filter()
+        indexOf()
+        lastIndexOf()
+
+6. Sorting Elements
+       
+        sort()        : Arranges elements in ascending order.
+        reverse()        : It is in reverse order [bottom to top]
+
+Syntax:
+         collection.sort().reverse()
+                                                                   Object Type
+
+- It is used to keep all related data and logic together.
+- Alan Kay introduced the concept of object into computer programming in early 1960's.
+- Object enables separation and reusability.
+- Object is a set of keys and values.
+
+Syntax:
+        {
+           key : value,
+           key : value
+        }
+
+- Key is always string type.
+- Value can be any type.
+    a) Primitive
+    b) Non Primitive
+    c) Function
+ 
+Syntax:
+      var product = {
+          id : 1,
+          name: "TV",
+          price: 45000,
+          cities: ["Hyd", "Delhi"],
+          rating: { rate: 4.2, count: 5000 },
+          qty: 2,
+          total: function(){
+              return qty * price;
+          }
+      }
+
+- You can access the keys within object by using "this" keyword and outside object by using object name.
+
+        total : function() {
+             return this.qty * this.price;
+         }
+
+        product.total();
+        product.price
+        product.name
+        product.rating.rate
+
+- You can assign new values into object
+
+        product.price = 56000;
+        product.rating.rate = 4.9;
+
+- If object comprises of a representation of only data then it is referred as "JSON".
+  [JavaScript Object Notation]
+
+- JSON is light weight and faster in interactions.
+- It doesn't require COM to marshal [Common Object Model]
+  COM is converting the Object code to Binary and vice versa.

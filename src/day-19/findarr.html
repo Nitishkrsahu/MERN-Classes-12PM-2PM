@@ -1,0 +1,79 @@
+<!-- <script>
+    let numbers = [5, 10, 15, 20];
+
+    let result = numbers.filter(function(num){
+        return num > 10;
+    })
+    console.log(result);
+</script> -->
+
+
+<!-- <script>
+    var categories = ["All", "ELectronic", "Fashion", "Footwear"];
+
+    categories.forEach(function (value, index){
+        document.write(`<input value=${index} type="checkbox"><label>${value}</label><br>`)
+    })
+</script> -->
+
+
+<!-- <script>
+    var sales = [5000, 3000, 2000, 23000, 32000, 60000];
+    for(var property in sales){
+        document.write(`[${property}] ${sales[property]}<br>`)
+    }
+</script> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function PageLoad() {
+            var para = document.createElement("p");
+            para.innerHTML = "hii this is me....";
+            document.querySelector("div").appendChild(para);
+        }
+    </script>
+</head>
+
+<body onload="PageLoad()">
+    <div>
+
+    </div>
+</body>
+
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function PageLoad(){
+            var ol = document.createElement("ol");
+            var li1 = document.createElement("li");
+            var li2 = document.createElement("li");
+
+            li1.innerHTML = "HTML";
+            li2.innerHTML = "CSS";
+
+            ol.appendChild(li1);
+            ol.appendChild(li2);
+
+            document.querySelector("body").appendChild(ol);
+        }
+    </script>
+</head>
+<body onload="PageLoad()">
+    
+</body>
+</html>
