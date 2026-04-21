@@ -1,0 +1,96 @@
+<!-- <script>
+    var product = {
+        id: 1,
+        Name: "Mobile",
+        Price: 54324.67,
+        Stock: true
+    }
+    for(var key in product){
+        document.write(`${key}: ${product[key]}<br>`)
+    }
+</script> -->
+
+<!-- <script>
+    var id = Symbol();
+    var product = {
+        [id]: 1,
+        Name: "Mobile",
+        Price: 54324.67,
+        Stock: true
+    }
+    delete product.Stock;
+    Object.keys(product).map(function(key){
+        document.write(`${key}: ${product[key]}<br>`);
+    })
+</script> -->
+
+<!-- <script>
+    var id = Symbol();
+     var product = {
+        [id]: 1,
+        Name: "Mobile",
+        Price: 54324.67,
+        Stock: true
+    }
+    // delete product.Stock;
+    if("Stock" in product){
+        document.write("Stock is Avilable");
+    }else{
+        document.write("Out of Stock");
+    }
+</script> -->
+
+<!-- <script>
+    var id = Symbol();
+    var product = {
+        [id]: 1,
+        Name: "Mobile",
+        Price: 54324.67,
+        Stock: true
+    }
+    document.write(`Total Count of keys: ${Object.keys(product).length}`);
+</script> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function pageLoad(){
+            var tr = document.createElement('tr');
+            var td1 = document.createElement('td');
+            var td2 = document.createElement('td');
+            var td3 = document.createElement('td');
+            var td4 = document.createElement('td');
+
+            td1.innerHTML = 1;
+            td2.innerHTML = "Tv";
+            td3.innerHTML = 43422;
+            td4.innerHTML = 5;
+
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            tr.appendChild(td4);
+
+            document.querySelector("tbody").appendChild(tr);
+        }
+    </script>
+</head>
+<body onload="pageLoad()">
+    <table border="1">
+        <thead>
+            <th>Sr. No</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Qty</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+</html>

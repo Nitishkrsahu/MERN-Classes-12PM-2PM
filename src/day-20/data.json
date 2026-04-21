@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Mouse",
+    "category": "Electronics",
+    "price": 499,
+    "inStock": true
+  },
+  {
+    "id": 2,
+    "name": "Bluetooth Headphones",
+    "category": "Electronics",
+    "price": 1299,
+    "inStock": true
+  },
+  {
+    "id": 3,
+    "name": "Notebook",
+    "category": "Stationery",
+    "price": 99,
+    "inStock": true
+  },
+  {
+    "id": 4,
+    "name": "Water Bottle",
+    "category": "Home",
+    "price": 199,
+    "inStock": false
+  },
+  {
+    "id": 5,
+    "name": "Backpack",
+    "category": "Accessories",
+    "price": 899,
+    "inStock": true
+  },
+  {
+    "id": 6,
+    "name": "Smartphone",
+    "category": "Electronics",
+    "price": 15999,
+    "inStock": true
+  },
+  {
+    "id": 7,
+    "name": "Desk Lamp",
+    "category": "Home",
+    "price": 699,
+    "inStock": false
+  },
+  {
+    "id": 8,
+    "name": "Running Shoes",
+    "category": "Footwear",
+    "price": 2499,
+    "inStock": true
+  },
+  {
+    "id": 9,
+    "name": "T-Shirt",
+    "category": "Clothing",
+    "price": 499,
+    "inStock": true
+  },
+  {
+    "id": 10,
+    "name": "Coffee Mug",
+    "category": "Kitchen",
+    "price": 149,
+    "inStock": true
+  }
+]

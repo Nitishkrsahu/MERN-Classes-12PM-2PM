@@ -1,0 +1,191 @@
+                                                Object Manipulations
+
+1. How to access all keys of object?
+A. By using  
+    a) for..in
+    b) Object.keys()
+
+Syntax:
+    for(var key in object)
+    {
+    }
+
+    Object.keys(objectName)    => It returns [ ] of keys.
+2. How to hide any key?
+A. By using JavaScript "Symbol" type [Primitive  Type]
+ 
+Syntax:
+    var key = Symbol();
+
+    var obj = {
+        [key] : value,
+        key : value
+    }
+ 
+      It is hidden over iterations, but accessible individually.
+3. How to remove a key?
+A. By using JavaScript "delete" operator.
+
+Syntax:
+      delete  object.keyName ;
+
+Note: You can't remove keys of built-in object, as they are read-only.
+ 
+      delete   Math.PI;        // invalid
+4. How to verify the availability of a key?
+A. By using JavaScript  "in" operator
+
+Syntax:
+    "key"  in objectName;        // true if key is available
+5. How to get the count of keys?
+A. Explicitly you have to get the collection of keys and length.
+
+Syntax:
+    Object.keys(objectname).length;
+                                                             Working with API's
+- Computing technologies and their architecture is classified into various types.
+    a) Distributed  Computing
+    b) Cloud Computing
+    c) Parallel Computing
+    d) Grid Computing etc.
+1. What is distributed computing?
+- Distributed computing allows communication between two applications running on two different machines.
+- It also enables communication between two objects running in two different process of same machine.
+
+2. What are various distributed computing technologies?
+
+
+CORBA  [Common Object Request Broken Architecture]    : 14+ languages [c++, java]
+DCOM    [Distribute Component Object Model]            : Visual Basic
+RMI           [Remote Method Invocation]                    : J2EE
+EJB           [Enterprise Java Beans]                        : Java
+Webservice                                         : All technologies
+Remoting                                            : .NET
+
+3. What are the various communication specifications?
+
+    a) SOAP
+    - Service Oriented Architecture Protocol
+    - Consumer makes an XML request
+
+          <Products>
+            <Product>
+                <Category> Electronics </Category>
+            </Product>
+         </Products>
+
+    - Provider sends an XML response
+
+        <Products>
+            <Product>
+                <Name>TV</Name>
+                <Category>Electronics </Category>
+            </Product>
+            ....
+            ....
+        </Products>
+
+    b) REST
+       - Representational State Transfer
+       - Consumer sends a simple query request
+
+              http://server.com/products?category=electronics
+                            (or)
+              http://server.com/products/category/electronics
+
+       - Provider sends XML or JSON response
+
+            [
+              {
+                 Name: "TV",
+                 Category: "Electronics"
+              },
+              ...
+            ]
+
+    c) JSON
+        - JavaScript Object Notation
+        - Consumer makes JSON request
+        - Provider sends JSON response
+
+   
+4. What are the issues with Web Service?
+- It uses SOAP.
+- It can run only on web server.
+- It can use only http protocol.
+
+5. What is Web API?
+- Application Programming Interface
+- It is an alternative for Web service.
+- It can run on any server.
+- It can use any protocol.
+- It uses REST.
+
+6. How to consume API's in application?
+A. By using "AJAX".
+
+                                                         JavaScript AJAX
+
+- Asynchronous JavaScript and XML.
+- It enables partial post back.
+- It can get or post details from page without reloading the page.
+- In browser AJAX calls are configured by using "XMLHttpRequest" object.
+
+1. Create a new HTTP object
+
+    var http = new XMLHttpRequest();
+
+
+2. Configure the request
+
+     http.open("method", "url", async:true/false);
+
+3. Send the request
+       
+    http.send();
+
+4. Execute the request by using "onreadystatechange()" event
+
+    http.onreadystatechange = function(){
+
+
+    }
+
+5. The request is process in 4 phases
+    1    = initial
+    2    = success
+    3    = complete
+    4    = ready
+
+6. You have to get response on ready
+
+     if(http.readyState===4)
+    {
+        // http.responseText
+    }
+FAQ: What are the issues with XMLHttpRequest ?
+Ans :
+      - It is not async by default.
+      - You have to configure explicitly async.
+      - It returns response in text format.
+      - Explicit conversions are required.
+      - It is not good in error handling.
+      - It is not good in security.
+
+Note: JavaScript provides an alternative "fetch()" API.
+
+        https://api.nasa.gov/                => register a new account
+        https://openweathermap.org/api
+
+       You have to register to get API key.
+FAQ: What are the issues with XMLHttpRequest object?
+Ans:
+    - It is not async by default.
+    - You have to make it async explicitly
+    - It requires multiple phase of execution.
+    - It returns only text as response.
+    - It requires lot of parsing techniques.
+    - It is not good in error handling.
+    - It is not good in handling security like CORS, XSRF etc.
+      [Cross Origin Resource Sharing]
+      [Cross Site Request Forgery]
