@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./style.css">
+    <script>
+        function bodyLoad(){
+            fetch('./data.json')
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(products){
+                console.log(products);
+                products.map(function(product){
+                    var div = document.createElement('div');
+                    var img = document.createElement('img');
+                    var button = document.createElement('button');
+                    var span = document.createElement('span');
+
+                    div.className = "card";
+                    img.src = product.image;
+                    img.className = "img";
+                    button.className = "bi bi-cart4";
+                    span.innerHTML = product.price;
+
+                    div.appendChild(img);
+                    div.appendChild(button);
+                    div.appendChild(span);
+
+                    document.getElementById("show-product").appendChild(div);
+                })
+            })
+            .catch(function(error){
+                console.log(error);
+            })
+            .finally(function(){
+                console.log("Ajaax Request End");
+            })
+        }
+    </script>
+</head>
+<body onload="bodyLoad()">
+    <div id="show-product">
+
+    </div>
+</body>
+</html>

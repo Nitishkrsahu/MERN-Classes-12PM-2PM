@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bodyLoad(){
+            fetch('./data.json')
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(products){
+                // console.log(products);
+                products.map(function(product){
+                    var tr = document.createElement('tr');
+                    var td1 = document.createElement('td');
+                    var td2 = document.createElement('td');
+                    var td3 = document.createElement('td');
+                    var td4 = document.createElement('td');
+                    var td5 = document.createElement('td');
+
+                    td1.innerHTML = product.id;
+                    td2.innerHTML = product.name;
+                    td3.innerHTML = product.category;
+                    td4.innerHTML = product.price;
+                    td5.innerHTML = product.inStock;
+
+                    tr.appendChild(td1);
+                    tr.appendChild(td2);
+                    tr.appendChild(td3);
+                    tr.appendChild(td4);
+                    tr.appendChild(td5);
+
+                    document.querySelector('tbody').appendChild(tr);
+                })
+            })
+            .catch(function(error){
+                console.log(error);
+            })
+            .finally(function(){
+                console.log("Ajaax Request End");
+            })
+        }
+    </script>
+</head>
+<body onload="bodyLoad()">
+    <table>
+        <thead>
+            <tr>
+                <th>Sr. No.</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+</html>
