@@ -1,3 +1,140 @@
 https://fakestoreapi.com/products
 
 
+                                     JavaScript Fetch API
+- JavaScript ES5+ version provides a Fetch API.
+- It is a JavaScript promise used to handle Ajax request.
+- Promise is by default async.
+- It is simple and faster in handling AJAX request.
+
+
+Syntax:
+    fetch("url")
+    .then(function(response){
+         return  response.json();
+    })
+    .then(function(data_json){
+        // use data
+    })
+    .catch(function(error){
+        // report the error
+    })
+    .finally(function(){
+        // executes always
+    })
+
+- "fetch()" is a window method.
+- "then()" executes on success [ resolve ].
+- "catch()" executes on failure [ reject ].
+- "finally()" executes always.
+                             Nasa API
+1. Visit "api.nasa.gov"
+
+2. Register for API key
+
+3. Browse APIs and copy the URL
+
+4. Replace Demo_Key with your API key
+
+    https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=your_api_key
+
+     {
+        "photos": [
+                   {
+                  "id":1001,
+                  "camera":{ }
+                    ...
+                }
+                 ]
+     }
+Issues with Object type:
+- Keys are only string type.
+- It will not allow any another key type.
+- It requires explicit methods for manipulation.
+- It is slow in interactions.
+
+                                                      JavaScript Map Type
+- It is a key and value collection.
+- Key can be any type.
+- It provides various implicit methods for manipulation.
+- It is faster when compared to object.
+- The only issue with map is, it is structure less.
+
+Syntax:
+    var data = new Map();
+
+    data.set(key, value)        store value
+    data.get(key)                access value
+    data.has(key)                verify key
+    data.delete(key)            remove value using key
+    data.clear()                removes all
+    data.keys()                returns all keys
+    data.values()                returns all values
+    data.entries()                returns all keys and values
+    data.size                    returns the count of keys
+FAQ: What is difference between object & map?
+
+
+                                                            Date Type
+
+- Date is stored in memory by using a date constructor.
+- It allocates memory for date and time values.
+
+Syntax:
+    var now = new Date();                // stores current date & time
+    var now = new Date("yy-mm-dd hrs:min:sec.milliSec")
+
+- To access and display date & time JavaScript provides following methods
+
+    getHours()                0 to 23
+    getMinutes()                0 to 59
+    getSeconds()                0 to 59
+    getMilliSeconds()            0 to 99 [999]
+    getDay()                    0 = Sunday  [weekday]
+    getDate()                    0-28,29,30,31
+    getMonth()                0 = January  
+    getFullYear()                2025
+    toDateString()
+    toLocaleDateString()
+    toTimeString()
+    toLocaleTimeString()
+Note: There are several 3rd Party date libraries, which you can use for JavaScript
+      applications to display date and time in various formats.
+            a) moment
+            b) dayjs
+            c) luxon
+
+- You can set a new date and time by using JS setter methods
+
+3
+                                                                    Timer Events
+a) setTimeout()
+b) clearTimeout()
+c) setInterval()
+d) clearInterval()
+Date Types
+- Date()
+- get & set
+
+                                                                    Timer Events
+
+1. setTimeout()
+- A computer performs given set of task at high processing speed.
+- It makes the processor busy and leads to hang up.
+- You can delay the task by specific duration.
+- The process of executing tasks one after another at high speed is known as "bouncing".
+- It requires to implement "debounce".
+- Debounce loads task into memory and keeps it inactive for a specific duration.
+
+Syntax:
+    setTimeout(function(){ }, interval)
+
+2. clearTimeout()
+- It is used to remove the task from memory before it is released into process.
+- It requires a memory reference where the given task is stored.
+
+Syntax:
+       const  thread =  setTimeout(function(){ }, interval);
+
+       clearTimeout(thread);
+Note: Timeout executes task only once, as it removes from memory and send to the process. If you want to execute again, then load into memory again.
