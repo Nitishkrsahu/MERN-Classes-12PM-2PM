@@ -1,0 +1,305 @@
+3. setInterval()
+- It is used to configure a "throttle".
+- Throttle is a mechanism of starting any task and continuing until stopped.
+- It repeats the specified task until stopped.
+- It loads a task into memory and releases a copy of task into process at regular time intervals.
+
+Syntax:
+      var thread = setInterval(function(){ }, interval);
+
+
+4. clearInterval()
+- It removes the task from memory.
+- It requires a memory reference name.
+
+Syntax:
+      clearInterval(thread);
+FAQ's:
+1. What is debounce?
+2. What is Throttle?
+
+
+Summary
+- setInterval()
+- clearInterval()
+- setTimeout()
+- clearTimeout()
+
+
+Operators
+Statements
+Functions
+Primitive
+    - Number
+    - String
+    - Boolean
+    - Null
+    - Undefined
+    - Symbol
+    - Big Int
+Non Primitive
+    - Array
+    - Object
+    - Map
+
+Date Type
+Regular Expression
+
+ var regExp = /  /;
+
+Operators
+1. Arithmetic Operator
+    +        Addition
+    -        Subtraction
+    *        Multiplication
+    /        Division
+    %        Modulus Division
+    **        Exponent / Power
+    ++        Increment
+    --        Decrement
+
+2. Comparison & Logical
+   
+    ==        Equal
+    ===        Identical Equal or Strict Equal
+    >        Greater than
+    >=        Greater than or Equal
+    <        Less than
+    <=        Less than or equal
+    !=        Not equal
+    !==        Not Identical
+    &&        Logical AND
+    ||         Logical OR
+    !        Logical NOT
+
+3. Assignment Operators
+
+    +=        Add and Assign            
+    -=        Subtract and Assign
+    *=        Multiply and assign
+    /=        Divide and assign
+    %=        Modulus and assign
+
+Note: You can access multiple elements in HTML by using following method
+
+        document.getElementsByName()
+        document.getElementsByTagName()
+        document.getElementsByClassName()
+4. Special Operators
+
+1. Ternary Operator  ?:
+
+Syntax:
+         (condition) ? true : false
+
+2. delete      : It is used to delete a key from object
+
+Syntax:
+       delete   object.key;
+
+3. in        : It is used to verify a key in object
+
+Syntax:
+      "key"  in object;        // true if found
+
+
+4. new    : It is dynamic memory allocation operator.
+
+Syntax:
+      var collection = new Array();
+      var now = new Date();
+
+5. typeof      : It returns the data type of value stored in a reference.
+
+Syntax:
+       var price = 50;
+       
+       typeof price;        // number
+6. instanceof   : It returns true if object is an instance of specified class.
+
+Syntax:
+          objectName  instanceof  className;        // true
+
+Ex:
+<script>
+    class Employee {
+
+    }
+    class Product {
+
+    }
+    let obj = new Employee();
+
+    document.write(`Obj is Product Type : ${obj instanceof Product}<br>`);
+    document.write(`Obj is Empolyee Type : ${obj instanceof Employee}<br>`);
+</script>
+
+7. void     : It discards the return of any element or function.
+
+Syntax:
+    <a href="javascript:void()"> Home </a>
+
+
+                                        JavaScript Statements:
+- Selection Statements
+    if, else, switch, case, default
+- Jump Statements
+    break, return, continue
+- Looping Control Statements
+    for, while, do while
+- Iteration Statements
+    for..in, for..of
+- Exception Handling Statements
+    try, catch, throw, finally
+Loop Control Statements
+- Looping is the process of executing a set of statements repeatedly based on specified condition.
+- Loop requires initialization, condition and counter.
+- Loops can be create by using
+    a) for
+    b) while
+    c) do while
+
+The For loop:
+- It is a looping control statement used by developer when it is sure about the number of iterations.
+- It is also to ensure that iteration counter will not change dynamically.
+
+Syntax:
+    for(initialization; condition; counter)
+    {
+       // statements
+    }
+
+    initialization         : It specifies where to start.
+    condition            : It defines a condition to stop
+    counter            : It defines how to proceed.    
+                      [increment, decrement, step]
+FAQ: What is difference between loop and iterator?
+Ans: Iterator is a design pattern, it doesn't require condition, counter and initializer.
+
+    for(var item of collection)
+    {
+    }
+
+Note: The initializer, condition and counter are configured in for() declaration.
+      You can configure outside the declaration according to requirement.
+
+Syntax:
+     var i = 1;
+     for( ;  i<=10; i++)
+     {
+
+    }
+The "while & do while"  loop:
+- These are looping control statements used when it is not sure about number of iterations and iteration counter may change dynamically.
+- The while loop executes statements only when condition is true.
+- The do while ensures that statements execute at least once even when condition is false.
+
+Syntax: while
+
+    var i = 1;
+    while(condition)
+    {
+       statements;
+       counter;
+    }
+
+Syntax:  do while
+
+    var i = 1;
+    do {
+        statements;
+        counter;
+    } while (condition);
+                                         Jump Statements
+a) break
+b) return
+c) continue
+
+- "break" can end the block but continue to compile & execute.
+- "return" can terminate the block and execution.
+- "continue" is used to skip the current counter and continue to next.
+Exception Handling Statements:
+- Errors in computer programming are classified into 2 types
+    1. Compile Time Errors
+    2. Runtime Errors
+- Compile time errors refer to issues in syntax, keywords, conversions, code blocks etc.
+- A program fails to execute when compile time error occurs.
+- Runtime errors refers to issues while using the application.
+- A compiler is unable to understand the instructions provided, which leads to
+  "abnormal termination" of application.
+- Exception Handling is required to avoid "Abnormal Termination".
+- JavaScript exception handling statements are:
+
+    a) try
+    b) catch
+    c) throw
+    d) finally
+
+- try is monitoring block, it contains statements to execute.
+- catch is handler block, it can catch the issues if any statement fails to execute.
+- throw is used to throw exception explicitly.
+- finally allows to execute always.
+
+Syntax:
+    try
+    {
+       statements;
+    }
+    catch(exception){
+        report exception;
+    }
+    finally {
+       statements always;
+    }
+
+Note: JavaScript in browser is not provided with basic error library, hence you have to explicitly throw errors.
+Summary:
+- Selection Statements
+- Iteration Statements
+- Looping Control
+- Jump Statements
+- Exception Handling Statements
+
+
+                                                                              JavaScript Functions
+
+- A function is used to "Refactor" the code.
+- Refactor is the process extracting a set of statements and enclosing into a block so that you can reuse the statements.
+
+Configuring a Function:
+- JavaScript functions can be configured using 2 techniques
+   
+    a) Declaration
+    b) Expression
+
+- Declaration allocates a memory for function to handle specified functionality.
+- It uses the same memory with same functionality every time.
+
+Syntax:
+     function Name(params)
+     {
+     }
+
+- Expression uses an existing memory where you can load functionality, and change according to the situation.
+
+Syntax:
+    var  Name = function() {
+
+    }
+Function Configuration Syntax:
+- A function configuration comprises of 3 basic elements
+    a) Declaration
+    b) Signature
+    c) Assignment
+
+Syntax:
+    function Name(params)
+    {
+    }
+
+    function Name(params)            => Declaration
+    Name(params)                => Signature
+    { }                            => Definition
+
+- A function is accessed using its Signature.
+- The functionality is defined using Definition.
