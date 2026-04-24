@@ -1,0 +1,114 @@
+<!-- <script>
+    function PrintNumber(n){
+        for(let i = 1; i <= n; i++){
+            document.write(`${i}<br>`);
+        }
+    }
+    PrintNumber(5);
+</script> -->
+
+
+<!-- <script>
+    function AddNumbers(a, b){
+       return console.log(a + b);
+       console.log(3 + 6);
+    }
+    AddNumbers(3, 4);
+</script> -->
+
+<!-- <script>
+    function AlertPrint(success){
+        success();
+    }
+    AlertPrint(function (){document.write("Login Success")});
+</script> -->
+
+<!-- <script>
+    function NumberPrint(a = 5, b = 6){
+        console.log(a);
+        console.log(b);
+    }
+    NumberPrint(4, 8);
+</script> -->
+
+<!-- <script>
+    function FruitsName(name, name2, ...Fruits){
+        document.write(name);
+        document.write(name2);
+        Fruits.map(function(fruit){
+            console.log(fruit);
+        });
+    }
+    FruitsName("Apple", "Banana", "PineApple", "Oranges", "Kiwi", "Grapes");
+</script> -->
+
+<!-- <script>
+    let arr = [3,5,6];
+    [a, b, c] = [...arr];
+    console.log(a);
+    console.log(b);
+    console.log(c);
+</script> -->
+
+<!-- <script>
+    function Component(){
+        return function(){
+            document.write("Function returned");
+        }
+    }
+    Component()();
+</script> -->
+
+<!-- <script>
+    function Outer(){
+        var x = 10;
+        function inner(){
+            var y = 20;
+            var result = x + y;
+            document.write(result);
+            return result;
+        }
+        document.write(`Addition=${inner()}`);
+    }
+    Outer();
+</script> -->
+
+
+<!-- <script>
+    function TestConnection(){
+        console.log(`Reply from 127.0.0.1\n`);
+        setTimeout(TestConnection, 1000);
+    }
+    TestConnection();
+</script> -->
+
+<!-- <script>
+    function PrintFactorial(n){
+        if(n == 1){
+            return 1;
+        }else{
+            return n * PrintFactorial(n - 1);
+        }
+    }
+    document.write(`Factorial is ${PrintFactorial(parseInt(prompt("Enter a number")))}`);
+</script> -->
+
+
+<!-- <script>
+    function FetchData(url, success, failure){
+        if(url === "fakestore"){
+            success('Response Data Received');
+        }else{
+            failure('Unable  to Fetch Data - Invalid URL');
+        }
+    }
+    FetchData(
+        prompt("Enter URL"),
+        function(response){
+            document.write(response);
+        },
+        function(error){
+            document.write(error);
+        }
+    );
+</script> -->

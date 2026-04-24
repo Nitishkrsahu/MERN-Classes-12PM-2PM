@@ -1,0 +1,150 @@
+Function Parameters:
+- A function can be parameter less.
+- It performs the same functionality every time.
+
+Syntax:
+    function Name()
+    {
+    }
+
+- A function can be parameterized.
+- Parameters are used to modify the function.
+
+Syntax:
+    function Name(params)
+    {
+    }
+
+- Parameters defined in declaration are known as "Formal Parameters".
+- Parameters defined while calling function are known as "Actual Parameters".
+
+Syntax:
+    function Name(n)
+    {
+    }
+    Name(5);
+
+    n    = formal parameter
+    5    = actual parameter
+
+    n = 5;
+
+- Formal parameter is a just a memory reference, where you can store any type value
+    a) Primitive
+    b) Non Primitive
+    c) Function
+Function Parameters
+- Parameter Type
+    a) Primitive
+    b) Non Primitive
+    c) Function
+
+FAQ: What is a higher order function?
+Ans:  It refers to a function that takes another function as parameter.
+     It is mostly used to configure a callback function.
+
+Syntax:
+     function Name(param)
+     {
+         param();
+     }
+     Name(function(){});
+- Every function can have multiple parameters.
+- Every parameter is a required parameter.
+- Parameters have order dependency.
+- JavaScript allows default parameters.
+- Default parameters are configured with default values.
+- If value is undefined then it uses the default.
+
+Syntax:
+    function Name(param1=value, param2=value)
+    {
+    }
+    Name("A", undefined);
+
+    param1=A
+    param2=value
+- A function can have max 1024 parameters.
+- Using too many parameters leads to security issues.
+- JavaScript ES5+ version supports "Rest" parameter.
+
+FAQ: What is Rest Parameter?
+- A single rest parameter can allow multiple arguments.
+- Rest parameter is defined using "...name".
+- It is array type.   [ ...name[] ]
+- Every function can have only one rest parameter.
+- Rest parameter can be defined with other parameters.
+- But a rest parameter must be the last parameter in formal list.
+- JavaScript allows spread approach for parameters.
+- A single array type argument can spread into multiple parameters.
+FAQ: What is difference between rest and spread?
+Ans:  "rest" refers to single parameter accepting multiple arguments.
+     "spread" refers to one argument spreading into multiple parameters.
+
+
+Function with Return:
+- Return is a jump statement.
+- It returns the memory allocated for function even after the end of function.
+- You can store any value into function memory and access globally.
+
+Syntax:
+    function Name(params)
+    {
+      return value;
+    }
+
+    Name()  = value;
+
+- A function can return with any type of values
+    a) Primitive
+    b) Non Primitive
+    c) Function
+Note : - If a function is returning a function, then it is known as "Function Currying".
+Function Parameters
+    - Rest
+    - Spread
+    - Function Params
+    - Function Currying
+    - Higher Order Function
+
+Function Return
+
+Function Closure:
+- Closure is a mechanism where outer function members are accessible to inner.
+- But inner function members are not accessible outer.
+- You can use return technique to keep the memory of inner and store the results.
+- So that you can access in outer.
+
+Syntax:
+     function outer()
+     {
+           function inner() {
+              return value;
+           }
+          //access inner();
+     }
+Function Recursion:
+- It is a technique of accessing a function with in the context of same function.
+- It allows to configure infinite loop, which can used optional condition to terminate.
+
+Syntax:
+    function  Name()
+    {
+       Name();
+    }
+    Name();
+Function Callback & Function Promise
+
+Callback:
+- A function uses "call" to execute. It executes every time.
+- A callback function executes according to state and situation.
+- Callback always uses "Synchronous" technique, which is a blocking technique.
+- It will not allow any another task in the background to execute.
+
+Syntax:
+    function Name(callback1, callback2...)
+    {
+        // condition to executed functions
+    }
+
+    Name(function1(){ }, function2(){ }
